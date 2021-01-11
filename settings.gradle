@@ -1,0 +1,2 @@
+include ':library-checkingmobileservices'
+rootProject.name = "checking-mobile-services"
