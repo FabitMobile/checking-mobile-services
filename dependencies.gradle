@@ -1,0 +1,11 @@
+ext {
+    timberVersion = '4.7.0'
+    playServicesMapsVersion = '17.0.0'
+    hmsMapsVersion = '5.0.1.300'
+
+    checkingMobileServicesDependencies = [
+            kotlinStdlib: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+            playServicesMaps: "com.google.android.gms:play-services-maps:$playServicesMapsVersion",
+            hmsMaps: "com.huawei.hms:maps:$hmsMapsVersion"
+    ]
+}
