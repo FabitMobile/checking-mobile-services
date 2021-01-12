@@ -22,7 +22,6 @@ class GoogleServices : MobileServices {
         return when (GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context)) {
             SUCCESS,
             SERVICE_UPDATING,
-            SERVICE_INVALID,
             SERVICE_DISABLED,
             SERVICE_VERSION_UPDATE_REQUIRED,
             SERVICE_MISSING_PERMISSION -> true

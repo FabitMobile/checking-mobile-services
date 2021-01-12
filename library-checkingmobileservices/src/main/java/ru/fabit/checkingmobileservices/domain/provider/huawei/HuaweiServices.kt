@@ -22,7 +22,6 @@ class HuaweiServices : MobileServices {
         return when (HuaweiApiAvailability.getInstance().isHuaweiMobileNoticeAvailable(context)) {
             SUCCESS,
             SERVICE_UPDATING,
-            SERVICE_INVALID,
             SERVICE_DISABLED,
             SERVICE_VERSION_UPDATE_REQUIRED,
             SERVICE_MISSING_PERMISSION -> true
