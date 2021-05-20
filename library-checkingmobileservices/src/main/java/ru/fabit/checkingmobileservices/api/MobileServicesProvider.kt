@@ -8,7 +8,7 @@ import ru.fabit.checkingmobileservices.domain.provider.UnknownServices
 import ru.fabit.checkingmobileservices.domain.provider.google.GoogleServices
 import ru.fabit.checkingmobileservices.domain.provider.huawei.HuaweiServices
 
-class MobileServicesProvider private constructor() {
+object MobileServicesProvider {
 
     private val googleServices: MobileServices by lazy {
         GoogleServices()
@@ -20,14 +20,6 @@ class MobileServicesProvider private constructor() {
 
     private val unknownServices: MobileServices by lazy {
         UnknownServices()
-    }
-
-    companion object {
-        private val mobileServiceProvider = MobileServicesProvider()
-
-        fun getInstance(): MobileServicesProvider {
-            return mobileServiceProvider
-        }
     }
 
     fun getMobileServiceTypes(context: Context): List<MobileServicesType> {
