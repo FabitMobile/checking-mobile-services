@@ -54,8 +54,7 @@ class MobileServicesProvider private constructor() {
     }
 
     private fun List<MobileServices>.findSuitableType(): MobileServicesType {
-        return (firstOrNull { it is HuaweiServices && it.getEmuiApiLvl() >= 21 }
-            ?: firstOrNull { it is GoogleServices }
+        return (firstOrNull { it is GoogleServices }
             ?: firstOrNull { it is HuaweiServices }
             ?: firstOrNull { it is UnknownServices })?.type
             ?: UNKNOWN
